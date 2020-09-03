@@ -6,11 +6,11 @@ if __name__ == "__main__":
     if narg == 1:
         sep = "."
     else:
-        sep = ": "
+        sep = ":"
     if narg == 2:
         argstr = "argument"
     else:
         argstr = "arguments"
     print("{} {}{}".format(narg - 1, argstr, sep))
     for pos in range(1, narg):
-        print("{}{}{}".format(pos, sep, args[pos]))
+        print("{}{} {}".format(pos, sep, args[pos]))
