@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    args = sys.argv #I save the args from the command line to this variable
-    narg = len(args) #I get the len of that list. AKA # of elements
+    args = sys.argv  # I save the args from the command line to this variable
+    narg = len(args)  # I get the len of that list. AKA # of elements
     if narg == 1:
         sep = "."
     else:
