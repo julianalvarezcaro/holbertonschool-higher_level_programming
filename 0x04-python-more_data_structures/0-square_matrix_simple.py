@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     copy = [row[:] for row in matrix]
     for fil in range(len(copy)):
