@@ -8,4 +8,4 @@ def best_score(a_dictionary):
                 bigger = a_dictionary[key]
         return bigger
     else:
-        return None 
+        return None
