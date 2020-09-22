@@ -1,4 +1,4 @@
-#!/usr/b#!/usr/bin/python3
+#!/usr/bin/python3
 """5-square module"""
 
 
