@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""5-square module"""
+"""6-square module"""
 
 
 class Square:
     """Square class"""
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         """Class constructor"""
-        self.__size = size
+        self.size = size
+        self.position = position
 
     def area(self):
         """Returns the area of the square"""
@@ -34,3 +35,12 @@ class Square:
             for col in range(self.__size):
                 print("#", end='')
             print()
+
+    def position(self, position):
+        if type(position) is not tuple or len(position) != 2:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if any(type(val) is not int for val in position):
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if any(val < 0 for val in position):
+            raise TypeError('position must be a tuple of 2 positive integers')
+        self.__position = position
