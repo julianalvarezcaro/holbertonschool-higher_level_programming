@@ -29,21 +29,25 @@ class Square:
 
     def my_print(self):
         """Prints a square of __size size with caracter #"""
+        for y in range(self.__position[1]):
+            print()
         if self.__size == 0:
             print()
         for fil in range(self.__size):
+            for x in range(self.__position[0]):
+                print(' ', end='')
             for col in range(self.__size):
                 print("#", end='')
             print()
 
     @property
     def position(self):
-        """Getter for __position"""
+        """Getter for position"""
         return self.__position
 
     @position.setter
     def position(self, position):
-        """Setter for __position"""
+        """Setter for position"""
         if type(position) is not tuple or len(position) != 2:
             raise TypeError('position must be a tuple of 2 positive integers')
         if any(type(val) is not int for val in position):
