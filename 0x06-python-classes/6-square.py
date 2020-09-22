@@ -29,9 +29,10 @@ class Square:
 
     def my_print(self):
         """Prints a square of __size size with caracter #"""
-        for y in range(self.__position[1]):
-            print()
         if self.__size == 0:
+            print()
+            return
+        for y in range(self.__position[1]):
             print()
         for fil in range(self.__size):
             for x in range(self.__position[0]):
