@@ -1,4 +1,7 @@
-#!/usr/bin/python3
+#!/usr/b#!/usr/bin/python3
+"""5-square module"""
+
+in/python3
 class Square:
     """Square class"""
     def __init__(self, size=0):
