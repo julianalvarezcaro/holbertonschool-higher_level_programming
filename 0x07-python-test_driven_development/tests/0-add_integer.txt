@@ -5,9 +5,17 @@ The ``0-add_integer`` module
 Using ``add_integer``
 -------------------
 
+Checking docstring for module:
+    >>> __import__('0-add_integer').__doc__ != None
+    True
+
 First import "add_integer" from the "0-add_integer" module:
 
     >>> add_integer = __import__('0-add_integer').add_integer
+
+Check docstring for function:
+    >>> len(add_integer.__doc__) > 0
+    True
 
 Now you can use it:
 
