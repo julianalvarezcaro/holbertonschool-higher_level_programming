@@ -4,7 +4,7 @@ Empty rectangle Class
 """
 
 
-Class Rectangle:
+class Rectangle:
     """
     Empty Class
     """
