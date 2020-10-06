@@ -21,6 +21,10 @@ Now we can use it:
     Traceback (most recent call last):
     TypeError: name must be an integer
 
+    >>> bg.integer_validator("name", 12.8)
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+
     >>> bg.integer_validator("age", 0)
     Traceback (most recent call last):
     ValueError: age must be greater than 0
@@ -44,3 +48,19 @@ Now we can use it:
     >>> bg.integer_validator("my_int", None)
     Traceback (most recent call last):
     TypeError: my_int must be an integer
+
+    >>> bg.integer_validator("tuple", (2, 3))
+    Traceback (most recent call last):
+    TypeError: tuple must be an integer
+
+    >>> bg.integer_validator("dict", {"name": "Julian", "Loves": "Cats"})
+    Traceback (most recent call last):
+    TypeError: dict must be an integer
+
+    >>> bg.integer_validator("bool", True)
+    Traceback (most recent call last):
+    TypeError: bool must be an integer
+
+    >>> bg.integer_validator("bool", False)
+    Traceback (most recent call last):
+    TypeError: bool must be an integer
