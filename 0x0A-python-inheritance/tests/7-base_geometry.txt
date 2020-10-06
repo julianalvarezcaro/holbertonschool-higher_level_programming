@@ -15,11 +15,17 @@ Now we can use it:
 
     >>> bg.integer_validator("my_int", 12)
 
+    >>> bg.integer_validator("", 22)
+
     >>> bg.integer_validator("width", 89)
 
     >>> bg.integer_validator("name", "John")
     Traceback (most recent call last):
     TypeError: name must be an integer
+
+    >>> bg.integer_validator("", "John")
+    Traceback (most recent call last):
+    TypeError:  must be an integer
 
     >>> bg.integer_validator("name", 12.8)
     Traceback (most recent call last):
