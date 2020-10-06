@@ -32,3 +32,22 @@ Now you can use it:
 
     >>> l.print_sorted()
     ['a', 'a', 'i', 'k', 'w']
+
+    >>> my_list = MyList()
+    >>> print(my_list)
+    []
+
+    >>> my_list.print_sorted()
+    []
+
+    >>> my_list.append(500)
+    >>> my_list.append(1)
+    >>> print(my_list)
+    [500, 1]
+    >>> my_list.print_sorted()
+    [1, 500]
+
+    >>> sorted_list = my_list.print_sorted()
+    [1, 500]
+    >>> sorted_list is my_list
+    False
