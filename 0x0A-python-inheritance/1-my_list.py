@@ -9,4 +9,4 @@ class MyList(list):
 
     def print_sorted(self):
         """Prints a list in ascending order without altering it"""
-       print(sorted(self))
+        print(sorted(self))
