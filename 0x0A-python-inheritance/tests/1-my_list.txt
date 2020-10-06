@@ -1,0 +1,30 @@
+==========================
+The ``1-my_list`` module
+==========================
+
+Using ``print_sorted``
+----------------------
+
+First import "print_sorted" from the "1-my_list" module:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Now you can use it:
+
+    >>> l = MyList()
+    >>> l.append(155)
+    >>> l.append(2)
+    >>> l.append(74)
+    >>> l.append(-15)
+    >>> l.print_sorted()
+    [-15, 2, 74, 155]
+
+    >>> print(l)
+    [155, 2, 74, -15]
+    
+    >>> l = MyList("kawai")
+    >>> print(l)
+    ['k', 'a', 'w', 'a', 'i']
+
+    >>> l.print_sorted()
+    ['a', 'a', 'i', 'k', 'w']
