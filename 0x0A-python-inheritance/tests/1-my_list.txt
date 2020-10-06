@@ -21,6 +21,10 @@ Now you can use it:
 
     >>> print(l)
     [155, 2, 74, -15]
+
+    >>> l.print_sorted() == l
+    [-15, 2, 74, 155]
+    False
     
     >>> l = MyList("kawai")
     >>> print(l)
