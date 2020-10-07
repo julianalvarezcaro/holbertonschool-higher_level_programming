@@ -3,6 +3,7 @@
 
 
 class MyInt(int):
+    """MyInt class"""
     def __ne__(self, number):
         return super().__eq__(number)
 
