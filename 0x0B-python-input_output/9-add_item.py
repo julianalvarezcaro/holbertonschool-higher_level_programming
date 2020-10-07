@@ -12,15 +12,9 @@ filename = "add_item.json"
 
 def main(args):
     """Saves the list contaning the args into a file"""
-    if args:
-        prev_content = load_from_json_file(filename)
+    prev_content = load_from_json_file(filename)
 
-        if prev_content:
-            new_cont = prev_content + args
-        else:
-            new_cont = [] + args
-    else:
-        new_cont = []
+    new_cont = prev_content + args
     save_to_json_file(new_cont, filename)
 
 if __name__ == "__main__":
