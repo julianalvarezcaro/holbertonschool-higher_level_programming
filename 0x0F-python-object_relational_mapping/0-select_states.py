@@ -8,11 +8,11 @@ if __name__ == "__main__":
     import sys
 
     args = sys.argv
-    us = args[1]
-    # pw = args[2]
-    nm = args[3]
+    u = args[1]
+    p = args[2]
+    n = args[3]
 
-    db = MySQLdb.connect(host='127.0.0.1', port=3306, user=us, db=nm)
+    db = MySQLdb.connect(host='127.0.0.1', port=3306, user=u, passwd=p, db=n)
     cur = db.cursor()
 
     cur.execute("SELECT * FROM states ORDER BY states.id")
