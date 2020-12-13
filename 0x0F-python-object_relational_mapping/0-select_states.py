@@ -5,15 +5,14 @@ Arguments received:
 """
 
 import MySQLdb
-import sys
+from sys import argv
 
 
 if __name__ == "__main__":
 
-    args = sys.argv
-    username = args[1]
-    password = args[2]
-    db_name = args[3]
+    username = argv[1]
+    password = argv[2]
+    db_name = argv[3]
 
     db = MySQLdb.connect(host='127.0.0.1',
                          port=3306,
