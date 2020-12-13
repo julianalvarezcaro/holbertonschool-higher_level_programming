@@ -3,9 +3,12 @@
 Arguments received:
     MySQL username, MySQL password, database name
 """
+
+import MySQLdb
+import sys
+
+
 if __name__ == "__main__":
-    import MySQLdb
-    import sys
 
     args = sys.argv
     username = args[1]
