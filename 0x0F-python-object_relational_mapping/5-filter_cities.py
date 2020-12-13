@@ -22,13 +22,16 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     cur.execute(
-        "SELECT GROUP_CONCAT(DISTINCT cities.name SEPARATOR ', ')\
+        "SELECT cities.name\
         FROM cities\
         JOIN states ON cities.state_id=states.id\
-        WHERE states.name=%s", (name,))
+        WHERE states.name=%s\
+        ORDER BY cities.id", (name,))
 
-    for row in cur:
-        print(row[0])
-
+    sep = ""
+    for row in cur.fetchall():
+        for col in row:
+            print("{}{}".format(sep, col), end="")
+            sep = ", "
     cur.close()
     db.close()
