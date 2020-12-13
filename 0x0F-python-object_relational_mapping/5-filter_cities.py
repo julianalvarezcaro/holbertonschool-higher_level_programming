@@ -17,15 +17,14 @@ if __name__ == "__main__":
                          port=3306,
                          user=username,
                          passwd=password,
-                         db=db_name,
-                         charset="utf8")
+                         db=db_name)
     cur = db.cursor()
 
     cur.execute(
         "SELECT cities.name\
         FROM cities\
-        JOIN states ON cities.state_id=states.id\
-        WHERE states.name=%s\
+        JOIN states ON cities.state_id = states.id\
+        WHERE states.name = %s\
         ORDER BY cities.id", (name,))
 
     sep = ""
@@ -33,5 +32,6 @@ if __name__ == "__main__":
         for col in row:
             print("{}{}".format(sep, col), end="")
             sep = ", "
+    print()
     cur.close()
     db.close()
