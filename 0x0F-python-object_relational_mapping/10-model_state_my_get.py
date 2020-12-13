@@ -11,6 +11,7 @@ if __name__ == "__main__":
     password = argv[2]
     db_name = argv[3]
     name = argv[4]
+    quer = False
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(username, password, db_name))
@@ -19,7 +20,7 @@ if __name__ == "__main__":
     session = Session()
 
     quer = session.query(State).filter(State.name == name)
-    if quer:
+    if quer.count() != 0:
         for instance in quer:
             print("{}".format(instance.id))
     else:
