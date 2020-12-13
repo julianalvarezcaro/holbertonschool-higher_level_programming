@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     quer = session.query(State).first()
     if quer:
-        print("{}: {}".format(instance.id, instance.name))
+        print("{}: {}".format(quer.id, quer.name))
     else:
         print("Nothing")
     session.close()
