@@ -20,7 +20,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = session.query(State).all()
-    for instance in query:
+    quer = session.query(State).all()
+    for instance in quer:
         print("{}: {}".format(instance.id, instance.name))
     session.close()
