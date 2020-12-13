@@ -8,7 +8,6 @@ if __name__ == "__main__":
     import sys
 
     args = sys.argv
-    args = sys.argv
     username = args[1]
     password = args[2]
     db_name = args[3]
@@ -22,7 +21,7 @@ if __name__ == "__main__":
     cur = db.cursor()
 
     cur.execute("SELECT * FROM states WHERE name =\
-'{}' ORDER BY states.id".format(name))
+'{}' ORDER BY id".format(name))
     rows = cur.fetchall()
     for row in rows:
         print(row)
