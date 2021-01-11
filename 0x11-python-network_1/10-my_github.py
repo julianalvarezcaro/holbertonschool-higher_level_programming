@@ -12,4 +12,3 @@ if __name__ == "__main__":
     response = requests.get('https://api.github.com/user', auth=(user, passw))
     jfile = response.json()
     print(jfile['id'])
-    
