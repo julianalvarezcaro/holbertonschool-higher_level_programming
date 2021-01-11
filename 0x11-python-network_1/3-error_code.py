@@ -14,7 +14,7 @@ if __name__ == "__main__":
     try:
         req = request.Request(url)
 
-        response = request.urlopen(req)
-        print(response.read().decode())
+        with request.urlopen(req) as response:
+            print(response.read().decode())
     except HTTPError as error:
         print("Error code: {}".format(error.code))
