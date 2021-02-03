@@ -16,6 +16,6 @@ const args = process.argv.slice(2);
 if (args.length <= 1) {
   console.log(1);
 } else {
-  const secondBig = args.sort(compareFunc);
+  const secondBig = args.sort(compareFunc)[1];
   console.log(secondBig);
 }
