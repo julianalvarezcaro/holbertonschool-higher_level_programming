@@ -14,7 +14,7 @@ function compareFunc (x, y) {
 
 const args = process.argv.slice(2);
 if (args.length <= 1) {
-  console.log(1);
+  console.log(0);
 } else {
   const secondBig = args.sort(compareFunc)[1];
   console.log(parseInt(secondBig));
