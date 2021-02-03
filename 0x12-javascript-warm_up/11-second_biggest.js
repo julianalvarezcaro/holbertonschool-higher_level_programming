@@ -10,8 +10,8 @@ function compareFunc (a, b) {
   return 0;
 }
 
-const args = process.argv;
-if (args.length <= 3) {
+const args = process.argv.slice(2);
+if (args.length <= 1) {
   console.log(1);
 } else {
   const secondBig = args.sort(compareFunc)[1];
