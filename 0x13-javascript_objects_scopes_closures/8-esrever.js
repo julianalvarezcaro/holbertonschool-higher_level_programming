@@ -3,10 +3,10 @@
 exports.esrever = function (list) {
   const lastIndex = list.length - 1;
   let index;
-  let reversed = [];
+  const reversed = [];
 
   for (index = lastIndex; index >= 0; index--) {
     reversed.push(list[index]);
   }
-  return reversed
-}
+  return reversed;
+};
