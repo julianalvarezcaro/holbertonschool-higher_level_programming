@@ -13,7 +13,7 @@ const myClass = class Rectangle {
     let w;
     for (h = 0; h < this.height; h++) {
       for (w = 0; w < this.width; w++) {
-        process.stdout.write('x');
+        process.stdout.write('X');
       }
       console.log();
     }
