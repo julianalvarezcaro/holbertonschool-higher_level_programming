@@ -7,6 +7,5 @@ const fs = require('fs');
 fs.writeFile(file, text, error => {
   if (error) {
     console.log(error);
-    return;
   }
 });
