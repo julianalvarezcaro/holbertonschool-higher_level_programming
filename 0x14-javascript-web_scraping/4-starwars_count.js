@@ -7,12 +7,12 @@ request(url, function (error, response, body) {
   error = 0;
   const jsonRep = JSON.parse(body);
   let counter = 0;
-  for (film of jsonRep.results) {
-    for (character of film.characters) {
-      if (character.includes("18")) {
+  for (const film of jsonRep.results) {
+    for (const character of film.characters) {
+      if (character.includes('18')) {
         counter++;
       }
     }
   }
-  console.log(counter)
+  console.log(counter);
 });
